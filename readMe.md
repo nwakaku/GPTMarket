@@ -1,5 +1,8 @@
 # GPTStore - Revolutionizing AI Democracy with OpenAI Assistant
 
+# Enterprise Mode Verification Hash -
+0x91b9d02923330b09e56e79d5aca09bf82c16745a05fb6d7e491f2eb2de9d5fd0
+
 ## **Introduction**
 
 Welcome to GPTStore, a groundbreaking initiative that harnesses the power of the OpenAI Assistant to create a dynamic ecosystem for developers. Our platform is designed to facilitate seamless knowledge-sharing by allowing users to effortlessly build and train AI Dev Advocates. These intelligent assistants can be rented out as NFTs, providing others with time-based access and offering a unique way to explore, learn, and comprehend complex concepts.
@@ -60,3 +63,11 @@ As the AI Dev Advocate Platform evolves, our vision extends beyond the current c
 8. Run `npm install`
 9. Run `npm run dev`
 10. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+
+  npx @api3/airnode-admin derive-sponsor-wallet-address \
+  --airnode-xpub xpub6CuDdF9zdWTRuGybJPuZUGnU4suZowMmgu15bjFZT2o6PUtk4Lo78KGJUGBobz3pPKRaN9sLxzj21CMe6StP3zUsd8tWEJPgZBesYBMY7Wo \
+  --airnode-address 0x6238772544f029ecaBfDED4300f13A3c4FE84E1D \
+  --sponsor-address 0xE203693C42E61Fd50142858A6f2642c3BFab158e
+
+  ipfs://bafyreialojl5lwo4duobskmf6d2lvrvfirwdgyt6ug2htjxvwe3256gkoq/metadata.json

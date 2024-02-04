@@ -1,13 +1,14 @@
 // SPDX-License-Identifier: CC0-1.0
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.24;
 
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
+import "contracts/QRNGRequester.sol";
 import "./IERC4907.sol";
 
 // Main contract definition for the GPTStore.
-contract GPTStore is IERC4907, ERC721URIStorage,  ReentrancyGuard {
+contract GPTStore is IERC4907, ERC721URIStorage, ReentrancyGuard, QrngRequester {
     
 
    // Struct to represent information about an Assistant.
@@ -28,7 +29,7 @@ contract GPTStore is IERC4907, ERC721URIStorage,  ReentrancyGuard {
     }
 
     // Various state variables.
-    uint256 private nftId = 1;             // Counter for NFT IDs.
+    uint256 private nftId;             // Counter for NFT IDs.
     uint256 private assistNo = 1;          // Counter for Assistant IDs.
     address private devAddress;            // Address of the developer.
     uint256[] private assistantIds;        // Array to store assistant IDs.
@@ -48,11 +49,9 @@ contract GPTStore is IERC4907, ERC721URIStorage,  ReentrancyGuard {
     event Rent(uint256 nftId, address indexed user);
 
 
-    constructor()
-     ERC721("GPTStore", "GPT")
-     {
+    constructor(address _airnodeRrp) QrngRequester(_airnodeRrp) ERC721("GPTStore", "GPT") {
         devAddress = msg.sender;
-     }
+    }
 
     /// @notice Sets information about available assistants.
     /// @dev This function allows the contract owner to define details for a new assistant.
@@ -144,6 +143,12 @@ contract GPTStore is IERC4907, ERC721URIStorage,  ReentrancyGuard {
     /// @dev This function allows a user to rent an assistant for a specified duration by providing the assistant number.
     /// @param assistantNo The number of the assistant to be rented.
     function rent(uint256 assistantNo) external payable nonReentrant {
+        // Call the makeRequestUint256 function from QrngExample to generate a random number
+        makeRequestUint256();
+
+        // Use the random number as the NFT ID for renting
+        nftId = randomValue;
+
         // Various require statements to check conditions for renting.
         require(assistantsGroups[assistantNo].pricePerHour > 0, "Assistant template not found");
         cleanUpOldRentals();
@@ -175,8 +180,8 @@ contract GPTStore is IERC4907, ERC721URIStorage,  ReentrancyGuard {
         // Store the rented assistant ID for the user.
         userRentedAssistants[msg.sender].push(nftId);
 
-        // Increment the NFT ID for the next rental.
-        nftId++;
+        // // Increment the NFT ID for the next rental.
+        // nftId++;
     }
 
 
@@ -279,16 +284,22 @@ contract GPTStore is IERC4907, ERC721URIStorage,  ReentrancyGuard {
     /// @notice Cleans up old rentals.
     /// @dev This function iterates through all NFTs and removes expired rentals, updating state accordingly.
     function cleanUpOldRentals() public {
-        for (uint256 tokenId = 1; tokenId < nftId; tokenId++) {
-            if (userOf(tokenId) != address(0) && userExpires(tokenId) < block.timestamp) {
+        uint256[] storage rentedIds = userRentedAssistants[msg.sender];
+
+        for (uint256 i = 0; i < rentedIds.length; i++) {
+            uint256 tokenId = rentedIds[i];
+
+            // Check if the user still owns the NFT before retrieving its information.
+            if (userOf(tokenId) == msg.sender && userExpires(tokenId) < block.timestamp) {
                 // NFT has expired, remove it from userRentedAssistants.
-                removeRentedAssistantFromUser(tokenId);
+                removeInvalidRentedAssistant(i);
 
                 // Burn the NFT.
                 _burn(tokenId);
             }
         }
     }
+
 
     function blockerT() public view returns (uint256){
         return block.timestamp;
