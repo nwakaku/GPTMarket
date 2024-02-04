@@ -41,7 +41,7 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
   [publicProvider()]
 );
 
-const projectId = 'YOUR_PROJECT_ID';
+const projectId = "65c8eac925c69ff2ffbf2b1309a29786";
 
 const { wallets } = getDefaultWallets({
   appName: 'GPTStore',

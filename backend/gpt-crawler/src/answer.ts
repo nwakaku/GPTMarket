@@ -2,7 +2,7 @@ import fs from "fs";
 import OpenAI from "openai";
 
 const openai = new OpenAI({
-  apiKey: "",
+  apiKey: process.env.OPENAI_APIKEY,
 });
 
 let textValue: string;
