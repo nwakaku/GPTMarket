@@ -1,15 +1,15 @@
-# GPTStore - Revolutionizing AI Democracy with OpenAI Assistant
+# GPTMarket - A WEB3 MARKETPLACE FOR CUSTOM AIs
 
 # Enterprise Mode Verification Hash -
-0x91b9d02923330b09e56e79d5aca09bf82c16745a05fb6d7e491f2eb2de9d5fd0
+0x0461b71a8f747f1924d5e3089e83bc447a693217d0cbd8e27162b8095d691875
 
 ## **Introduction**
 
-Welcome to GPTStore, a groundbreaking initiative that harnesses the power of the OpenAI Assistant to create a dynamic ecosystem for developers. Our platform is designed to facilitate seamless knowledge-sharing by allowing users to effortlessly build and train AI Dev Advocates. These intelligent assistants can be rented out as NFTs, providing others with time-based access and offering a unique way to explore, learn, and comprehend complex concepts.
+Welcome to GPTMarket, a groundbreaking initiative that harnesses the power of the OpenAI Assistant to create a dynamic ecosystem for developers. Our platform is designed to facilitate seamless knowledge-sharing by allowing users to effortlessly build and train AIs. These intelligent assistants can be rented out as NFTs on lightlink Blockchain, providing others with time-based access and offering a unique way to explore, learn, and comprehend complex concepts.
 
 ## **Inspiration**
 
-Our inspiration stems from a collective desire to empower developers and the general public with easy access to accurate and real-time information. Traditional language models face challenges in rapidly evolving domains due to knowledge cutoffs. The AI Dev Advocate Platform addresses these limitations by leveraging the OpenAI Assistant's ability to adapt to the dynamic nature of today's information landscape.
+Our inspiration stems from a collective desire to empower developers and the general public with easy access to accurate and real-time information. Traditional language models face challenges in rapidly evolving domains due to knowledge cutoffs. The GPTStore Platform addresses these limitations by leveraging the OpenAI Assistant's ability to adapt to the dynamic nature of today's information landscape.
 
 ## **Platform Functionality**
 
@@ -36,16 +36,16 @@ The GPTStore leverages a robust technology stack to deliver a seamless experienc
 - **Next.js**: A React-based web framework for building modern web applications.
 - **Express**: A web application framework for Node.js, providing a robust set of features for web and mobile applications.
 - **Solidity**: A programming language for writing smart contracts on the Ethereum blockchain.
-- **OpenAI Assistant**: The core engine behind our intelligent AI Dev Advocates.
-- **XRPL**: The XRPL (XRP Ledger) is integrated to facilitate NFT transactions and enhance the security of our platform.
+- **OpenAI Assistant**: The core engine behind our intelligent AI's.
+- **LightLink Blockchain**: The LightLink Blockchain is integrated to facilitate NFT transactions and enhance the security of our platform.
 
 ## **Accomplishments**
 
-The GPTStore has successfully implemented core functionalities, including AI Dev Advocate creation, renting, and seamless knowledge-sharing.
+The GPTStore has successfully implemented core functionalities, including AI Assistants creation, renting, and seamless knowledge-sharing.
 
 ## **Future Roadmap**
 
-As the AI Dev Advocate Platform evolves, our vision extends beyond the current capabilities. We plan to diversify by incorporating additional web3 protocols, creating a vibrant ecosystem where users can craft specialized AI Dev Advocates tailored to distinct knowledge domains. The roadmap envisions a dynamic platform, fostering a community-driven marketplace for knowledge-sharing through rented AI Dev Advocates. Join us on this exciting journey!
+As the Web3 GPTMarket evolves, our vision extends beyond the current capabilities. We plan to diversify by incorporating additional web3 protocols, creating a vibrant ecosystem where users can craft specialized AI's tailored to distinct knowledge domains. The roadmap envisions a dynamic platform, fostering a community-driven marketplace for knowledge-sharing through rented AI Models. Join us on this exciting journey!
 
 ## Try It Out
 
@@ -63,11 +63,3 @@ As the AI Dev Advocate Platform evolves, our vision extends beyond the current c
 8. Run `npm install`
 9. Run `npm run dev`
 10. Open [http://localhost:3000](http://localhost:3000) in your browser
-
-
-  npx @api3/airnode-admin derive-sponsor-wallet-address \
-  --airnode-xpub xpub6CuDdF9zdWTRuGybJPuZUGnU4suZowMmgu15bjFZT2o6PUtk4Lo78KGJUGBobz3pPKRaN9sLxzj21CMe6StP3zUsd8tWEJPgZBesYBMY7Wo \
-  --airnode-address 0x6238772544f029ecaBfDED4300f13A3c4FE84E1D \
-  --sponsor-address 0xE203693C42E61Fd50142858A6f2642c3BFab158e
-
-  ipfs://bafyreialojl5lwo4duobskmf6d2lvrvfirwdgyt6ug2htjxvwe3256gkoq/metadata.json
