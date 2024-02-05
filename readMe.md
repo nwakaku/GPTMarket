@@ -48,8 +48,7 @@ As the Web3 GPTMarket evolves, our vision extends beyond the current capabilitie
 
 ## Try It Out
 
-- [Website](https://gptstore.gitbook.io/gptstore-documentation-horizon/)
-- [YouTube](https://www.youtube.com/watch?v=HJOp9F2Xlak)
+- [YouTube](https://youtu.be/0GAf9xAS4K0)
 
 ### Running Locally
 1. Clone the project
