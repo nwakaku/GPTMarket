@@ -125,62 +125,53 @@ const Question = () => {
       {/* Left Portion (1/3 of the screen) */}
       <div className="flex-none w-1/4 p-8 bg-slate-900 rounded-lg my-5 ml-5">
         {/* Content for the left portion goes here */}
+        
         <div className="text-center">
-          <img
-            src={`https://ipfs.io/ipfs/${image}`} // Use a placeholder image if image is not available
-            alt="alt"
-            className="w-20 h-20 object-cover rounded-md mx-auto"
-          />
-          <div className="text-slate-400 font-bold text-sm p-2 mt-2">
-            {description}
-          </div>
-        </div>
-        <div className="text-center">
-          <p className="text-1xl font-bold text-sm mt-5 ">Example questions</p>
+          <p className="text-slate-400 font-bold mt-5 ">Example questions</p>
 
           <div
-            className="cursor-pointer bg-black text-white font-semibold text-sm p-2 rounded-lg mt-5"
+            className="cursor-pointer text-white font-semibold text-sm rounded-lg mt-5"
             onClick={() =>
               handleExampleClick(
-                "How to integrate Chainlink VRF (Verifiable Random Function) in my smart contract?"
+                "What are the recommended browser-based IDEs for Solidity development on the LightLink protocol?"
               )
-            }
-          >
-            How to integrate Chainlink VRF in my smart contract?
+            }>
+            What are the recommended browser-based IDEs for Solidity development
+            on the LightLink protocol?
           </div>
           <div
-            className="cursor-pointer bg-black text-white font-semibold text-sm p-2 rounded-lg mt-5"
+            className="cursor-pointer text-white font-semibold text-sm rounded-lg mt-5"
             onClick={() =>
               handleExampleClick(
-                "What are the key features and advantages of using Avalanche blockchain?"
+                "Can you explain the role of Boneh-Lynn-Shacham Signatures (BLS) in the LightLink protocol?"
               )
-            }
-          >
-            Key features and advantages of Avalanche blockchain?
+            }>
+            Can you explain the role of Boneh-Lynn-Shacham Signatures (BLS) in
+            the LightLink protocol?
           </div>
           <div
-            className="cursor-pointer bg-black text-white font-semibold text-sm p-2 rounded-lg mt-5"
+            className="cursor-pointer text-white font-semibold text-sm rounded-lg mt-5"
             onClick={() =>
               handleExampleClick(
-                "How to deploy a smart contract on the Polygon (Matic) network?"
+                "How does LightLink support the development of smart contracts using EVM and Solidity basics?"
               )
-            }
-          >
-            How to deploy a smart contract on the Polygon network?
+            }>
+            How does LightLink support the development of smart contracts using
+            EVM and Solidity basics?
           </div>
           <div
-            className="cursor-pointer bg-black text-white font-semibold text-sm p-2 rounded-lg mt-5"
+            className="cursor-pointer text-white font-semibold text-sm rounded-lg mt-5"
             onClick={() =>
               handleExampleClick(
-                "I'm new to chainlink CCIP, how do i get started building with it?"
+                "Could you provide insights into the Live Networks on the LightLink protocol, specifically focusing on the Phoenix and Pegasus networks?"
               )
-            }
-          >
-            I'm new to chainlink CCIP, how do i get started building with it?
+            }>
+            Could you provide insights into the Live Networks on the LightLink
+            protocol, specifically focusing on the Phoenix and Pegasus networks?
           </div>
         </div>
 
-        <div className="mt-14 ml-2 flex items-center text-slate-200 font-bold text-1xl p-4 rounded-lg">
+        <div className="mt-14 ml-2 flex items-center text-slate-200 font-bold text-1xl p-2 rounded-lg">
           Rented time:{" "}
           <span className="ml-2">
             <Timer time={10000} />
@@ -192,16 +183,14 @@ const Question = () => {
             size="lg"
             variant="outline"
             className="cursor-pointer bg-green-600 mr-2 hover:bg-green-800 hover:text-white text-white font-semibold text-md p-3 rounded-lg "
-            onClick={extendRentalClick}
-          >
+            onClick={extendRentalClick}>
             <TimerReset className="h-5 w-5" /> Extend rent
           </Button>
           <Button
             size="lg"
             variant="outline"
             className="cursor-pointer ml-2 bg-red-600 hover:bg-red-800 hover:text-white text-white font-semibold text-md p-3 rounded-lg "
-            onClick={StopRentalClick}
-          >
+            onClick={StopRentalClick}>
             <LucideBadgeX className="h-5 w-5" /> Cancel rent
           </Button>
         </div>
@@ -265,15 +254,14 @@ const Question = () => {
             name="question"
             value={formData.question}
             onChange={handleChange}
-            className="mt-1 p-5 border rounded-md focus:outline-none focus:border-violet-400 bg-black border-none"
+            className="mt-1 p-5 border rounded-md focus:outline-none focus:border-green-400 bg-black border-none"
             placeholder="Ask me anything..."
             required
           />
           <Button
-            className="rounded-md bg-violet-800 hover:bg-violet-950"
+            className="rounded-md bg-green-800 hover:bg-green-950"
             onClick={handleSubmit}
-            type="submit"
-          >
+            type="submit">
             Send
           </Button>
         </div>

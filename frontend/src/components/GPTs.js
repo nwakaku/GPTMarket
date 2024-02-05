@@ -22,7 +22,7 @@ import { parseEther } from "viem";
 import { useFetchData } from "./hooks/useFetchData";
 
 const SuccessfulRented = () => (
-  <div className="text-white text-center p-4 bg-green-500 rounded-md">
+  <div className="text-white text-center p-4 bg-green-500 rounded-md h-min">
     Successfully Rented! Redirecting...
   </div>
 );
@@ -87,7 +87,7 @@ const GPTCard = ({ item, onRentSuccess, index }) => {
           </CardTitle>
         </div>
 
-        <CardDescription className="text-center text-gray-500 text-base font-normal mb-4">
+        <CardDescription className="text-center text-gray-500 text-sm font-normal mb-4">
           {cardData.description}
         </CardDescription>
 
@@ -109,7 +109,7 @@ const GPTCard = ({ item, onRentSuccess, index }) => {
               <SelectGroup>
                 <SelectItem value="usd">USD</SelectItem>
                 <SelectItem value="link">EUR</SelectItem>
-                <SelectItem value="dollar">XRP</SelectItem>
+                <SelectItem value="dollar">ETH</SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>

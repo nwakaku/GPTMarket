@@ -57,7 +57,7 @@ const GPTCard = ({ item, index }) => {
               query: { uri: item.URI, assistNo: regularNumber },
             }}
           >
-            <button className="bg-violet-600 hover:bg-violet-800 text-white text-md font-semibold rounded-lg py-2 px-8">
+            <button className="bg-green-600 hover:bg-green-800 text-white text-md font-semibold rounded-lg py-2 px-8">
               Interact
             </button>
           </Link>
@@ -91,7 +91,7 @@ const CreatedGPTs = () => {
 
   return (
     <>
-      <div className="my-5 mx-32">
+      <div className="my-5 mx-32 ">
         <div className="flex justify-center">
           {cid && cid.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">

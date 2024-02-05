@@ -10,15 +10,13 @@ const Banner = () => {
       <div class="border-b border-gray-900 grid max-w-screen-xl px-2 mx-auto lg:gap-8 xl:gap-0 lg:pb-12 lg:grid-cols-10 mb-3">
         <div class="mr-auto place-self-center lg:col-span-5">
           <h1 class="max-w-2xl mb-4 text-6xl font-extrabold leading-tight md:text-4xl xl:text-6xl text-black dark:text-black">
-            Unleash the Future:
-            <br />
-            AI-Powered NFT Marketplace.🚀
+            Unlock the Future of Knowledge with GPTMarket.🚀
           </h1>
 
           <p class="max-w-xl mb-8 font-light text-gray-500 lg:mb-10 md:text-lg lg:text-xl dark:text-gray-800">
-            Dive into the frontier of technology with our AI GPT Marketplace,
-            pioneering the decentralized web. Explore the boundless
-            possibilities of GPT technology.
+            Where OpenAI's Power Meets Blockchain. Seamlessly Build,
+            Train, and Rent GPTs as NFTs for Time-Based Access. Explore the
+            boundless possibilities of GPT technology.
           </p>
           <a
             href="/services"
