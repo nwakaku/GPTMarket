@@ -36,6 +36,7 @@ The GPTStore leverages a robust technology stack to deliver a seamless experienc
 - **Solidity**: A programming language for writing smart contracts on the Ethereum blockchain.
 - **OpenAI Assistant**: The core engine behind our intelligent GPT's.
 - **LightLink Blockchain**: The LightLink Blockchain is integrated to facilitate NFT transactions and enhance the security of our platform.
+- **BlockScout**: I created an Account on the Phoenix Blockscout instance and perform several actions within MyAccount, which include adding an item to a watchlist, adding private tags,and submitting public tags.”
 
 ## **Accomplishments**
 
